@@ -1,0 +1,40 @@
+{
+  "tasks": {
+    "0": {
+      "id": "0",
+      "taskid": "c44160b9",
+      "type": "start",
+      "name": "Playbook Start",
+      "nexttasks": "1"
+    },
+    "1": {
+      "id": "1",
+      "taskid": "015bd0d8",
+      "type": "regular",
+      "name": "Hello world",
+      "nexttasks": "2"
+    },
+    "2": {
+      "id": "2",
+      "taskid": "b8193b45",
+      "type": "condition",
+      "name": "Is this incident high severity",
+      "nexttasks": {
+        "no": ["4"],
+        "yes": ["3"]
+      }
+    },
+    "3": {
+      "id": "3",
+      "taskid": "11e43d6c",
+      "type": "regular",
+      "name": "Investigate it!"
+    },
+    "4": {
+      "id": "4",
+      "taskid": "eb04267c",
+      "type": "regular",
+      "name": "Go Sleep"
+    }
+  }
+}

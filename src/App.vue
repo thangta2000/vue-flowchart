@@ -1,16 +1,23 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Flowchart :chartData="data" />
+    <Mermaid :chartData="data" />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue"
+import Flowchart from "./components/flowchart"
+import Mermaid from "./components/mermaid"
+import data from "./data.json"
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Flowchart,
+    Mermaid,
+  },
+  data() {
+    return { data }
   },
 }
 </script>
